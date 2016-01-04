@@ -5,7 +5,6 @@ import android.os.HandlerThread;
 import android.os.Looper;
 
 import com.wopata.aspectlib.annotations.EnsureAsync;
-import com.wopata.aspectlib.annotations.EnsureUiThread;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -26,7 +25,7 @@ public class EnsureLooperAspect {
 
     private final Looper mAsyncLooper;
 
-    private static final String POINTCUT_SPECIFIC_LOOPER = "execution(@com.wopata.aspectlib.annotations.EnsureAsync * *(..))";
+    private static final String POINTCUT_ASYNC_THREAD = "execution(@com.wopata.aspectlib.annotations.EnsureAsync * *(..))";
 
     private static final String POINTCUT_UI_THREAD = "execution(@com.wopata.aspectlib.annotations.EnsureUiThread * *(..))";
 
@@ -46,7 +45,7 @@ public class EnsureLooperAspect {
         mHandlerMap.put(mAsyncLooper,new Handler(mAsyncLooper));
     }
 
-    @Around(POINTCUT_SPECIFIC_LOOPER)
+    @Around(POINTCUT_ASYNC_THREAD)
     public void adviceEnsureAsync(final ProceedingJoinPoint pjp) throws Throwable {
 
         MethodSignature ms = (MethodSignature) pjp.getSignature();

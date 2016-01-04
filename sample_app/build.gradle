@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.uphyca.android-aspectj'
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -18,15 +21,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors{
+        local {
+
+        }
+
+        jitpack {
+
+        }
+    }
 }
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
 
-    compile project(path: ':aspectlib')
+    jitpackCompile 'com.github.aardouin:AspectForAndroid:0.1'
+    localCompile project(path: ':aspectlib')
 }
