@@ -3,8 +3,9 @@ Some aspects to use on android
 
 ##Setup
 
+![Latest Release](https://img.shields.io/github/release/aardouin/AspectForAndroid.svg?label=latest%20release)
 
-Import library, current version is `0.1`
+Import library, current version is `1.0≤≤≤≤`
 
 ```groovy
 apply plugin: 'com.uphyca.android-aspectj'
