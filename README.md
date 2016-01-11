@@ -8,6 +8,7 @@ Some aspects to use on android
 Import library, current version is `1.0≤≤≤≤`
 
 ```groovy
+//apply this plugin after 'com.android.application'
 apply plugin: 'com.uphyca.android-aspectj'
 
 repositories{
@@ -21,6 +22,12 @@ dependencies {
 
 compile 'com.github.aardouin:AspectForAndroid:$version'
 ```
+
+Add aspectj to your classpath in your root `build.gradle`
+```
+classpath 'https://github.com/uPhyca/gradle-android-aspectj-plugin'
+```
+
 
 
 ##Thread management 
