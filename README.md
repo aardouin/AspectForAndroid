@@ -5,7 +5,7 @@ Some aspects to use on android
 
 ![Latest Release](https://img.shields.io/github/release/aardouin/AspectForAndroid.svg?label=latest%20release)
 
-Import library, current version is `1.0≤≤≤≤`
+Import library, current version is `1.0`
 
 ```groovy
 //apply this plugin after 'com.android.application'
