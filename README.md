@@ -14,6 +14,10 @@ repositories{
    	maven { url "https://jitpack.io" }
 }
 
+dependencies {
+        classpath 'com.uphyca.gradle:gradle-android-aspectj-plugin:0.9.14'
+}  
+
 compile 'com.github.aardouin:AspectForAndroid:$version'
 ```
 

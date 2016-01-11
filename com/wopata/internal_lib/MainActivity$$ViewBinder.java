@@ -28,15 +28,6 @@ public class MainActivity$$ViewBinder<T extends com.wopata.internal_lib.MainActi
           target.onUIThreadClicked();
         }
       });
-    view = finder.findRequiredView(source, 2131492976, "method 'onConfirmDefaultClicked'");
-    view.setOnClickListener(
-      new butterknife.internal.DebouncingOnClickListener() {
-        @Override public void doClick(
-          android.view.View p0
-        ) {
-          target.onConfirmDefaultClicked();
-        }
-      });
     view = finder.findRequiredView(source, 2131492977, "method 'onConfirmCustimClicked'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
@@ -44,6 +35,15 @@ public class MainActivity$$ViewBinder<T extends com.wopata.internal_lib.MainActi
           android.view.View p0
         ) {
           target.onConfirmCustimClicked();
+        }
+      });
+    view = finder.findRequiredView(source, 2131492976, "method 'onConfirmDefaultClicked'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onConfirmDefaultClicked();
         }
       });
   }
