@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.uphyca.android-aspectj'
+
+apply plugin: 'com.archinamon.aspectj'
 
 repositories {
     maven { url "https://jitpack.io" }
@@ -10,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.wopata.internal_lib"
-        minSdkVersion 9
+        minSdkVersion 22
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
