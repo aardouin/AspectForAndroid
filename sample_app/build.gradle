@@ -41,6 +41,6 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.jakewharton:butterknife:7.0.1'
 
-    jitpackCompile 'com.github.aardouin:AspectForAndroid:1.1_alpha1'
+    jitpackCompile 'com.github.aardouin:AspectForAndroid:1.0'
     localCompile project(path: ':aspectlib')
 }
